@@ -46,9 +46,10 @@ Route::group(['middleware' => 'auth'], function() {
     
     //route group untuk kasir
     Route::group(['middleware' => ['role:kasir']], function() {
-        
+        Route::get('/transaksi', 'OrderController@addOrder')->name('order.transaksi');
     });
     
     //home kita taruh diluar group karena semua jenis user yg login bisa mengaksesnya
     Route::get('/home', 'HomeController@index')->name('home');
+    
 });
