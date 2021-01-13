@@ -8,18 +8,21 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.3.0/ionicons.min.js" integrity="sha512-esqkwbZWQWGPKMg0apElthYF54n7TMcMGQs/rC8KyWIjuFt+d+kB2n4j7yWOXGn82wMrs5rLMPoiw7n73GJ5Nw==" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.3.0/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.3.0/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/iCheck/flat/blue.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/morris/morris.css') }}">
+    <!--<link rel="stylesheet" href="{{ asset('plugins/morris/morris.css') }}">-->
     <link rel="stylesheet" href="{{ asset('plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/datepicker/datepicker3.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker-bs3.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    @yield('css')
 </head>
 <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
+	<div class="wrapper">
         <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -87,7 +90,7 @@
     </script>
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js" integrity="sha512-tBzZQxySO5q5lqwLWfu8Q+o4VkTcRGOeQGVQ0ueJga4A1RKuzmAu5HXDOXLEjpbKyV7ow9ympVoa6wZLEzRzDg==" crossorigin="anonymous"></script>
-    <script src="{{ asset('plugins/morris/morris.min.js') }}"></script>
+    <!--<script src="{{ asset('plugins/morris/morris.min.js') }}"></script>-->
     <script src="{{ asset('plugins/sparkline/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
     <script src="{{ asset('plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
@@ -99,7 +102,9 @@
     <script src="{{ asset('plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
     <script src="{{ asset('plugins/fastclick/fastclick.js') }}"></script>
     <script src="{{ asset('dist/js/adminlte.js') }}"></script>
-    <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
+    <!--<script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>-->
     <script src="{{ asset('dist/js/demo.js') }}"></script>
+
+    @yield('js')
 </body>
 </html>
