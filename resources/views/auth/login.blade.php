@@ -22,14 +22,14 @@
                         class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
                         placeholder="{{ __('E-Mail Address') }}"
                         value="{{ old('email') }}">
-                    <span class="fa fa-envelope form-control-feedback"> {{ $errors->first('email') }}</span>
+                    <span class="form-control-feedback"> {{ $errors->first('email') }}</span>
                 </div>
                 <div class="form-group has-feedback">
                     <input type="password" 
                         name="password"
                         class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }} " 
                         placeholder="{{ __('Password') }}">
-                    <span class="fa fa-lock form-control-feedback"> {{ $errors->first('password') }}</span>
+                    <span class="form-control-feedback"> {{ $errors->first('password') }}</span>
                 </div>
                 <div class="row">
                     <div class="col-8">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </form>
-
+            <!--
             <div class="social-auth-links text-center mb-3">
                 <p>- OR -</p>
                 <a href="#" class="btn btn-block btn-primary">
@@ -60,7 +60,7 @@
             </p>
             <p class="mb-0">
                 <a href="#" class="text-center">Register a new membership</a>
-            </p>
+            </p>-->
         </div>
     </div>
 @endsection

@@ -73,10 +73,10 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <td>#</td>
-                                            <td>Kategori</td>
-                                            <td>Deskripsi</td>
-                                            <td>Aksi</td>
+                                            <th>No</th>
+                                            <th>Kategori</th>
+                                            <th>Deskripsi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

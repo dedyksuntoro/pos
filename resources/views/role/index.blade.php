@@ -69,11 +69,11 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <td>#</td>
-                                            <td>Role</td>
-                                            <td>Guard</td>
-                                            <td>Created At</td>
-                                            <td>Aksi</td>
+                                            <th>No</th>
+                                            <th>Role</th>
+                                            <th>Guard</th>
+                                            <th>Created At</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

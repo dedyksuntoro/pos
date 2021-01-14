@@ -28,8 +28,9 @@
                     <div class="col-md-12">
                         @card
                             @slot('title')
+                            Data Produk
                             <a href="{{ route('produk.create') }}" 
-                                class="btn btn-primary btn-sm">
+                                class="btn btn-primary btn-sm pull-right">
                                 <i class="fa fa-edit"></i> Tambah
                             </a>
                             @endslot
@@ -44,7 +45,7 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Gambar</th>
                                             <th>Nama Produk</th>
                                             <th>Stok</th>
                                             <th>Harga</th>

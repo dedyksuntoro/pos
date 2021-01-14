@@ -28,7 +28,8 @@
                     <div class="col-md-12">
                         @card
                             @slot('title')
-                            <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm">Tambah Baru</a>
+                            Data User
+                            <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm pull-right">Tambah Baru</a>
                             @endslot
                             
                             @if (session('success'))
@@ -41,12 +42,12 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <td>#</td>
-                                            <td>Nama</td>
-                                            <td>Email</td>
-                                            <td>Role</td>
-                                            <td>Status</td>
-                                            <td>Aksi</td>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

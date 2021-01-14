@@ -111,7 +111,7 @@
                                                             {{ in_array($row, $hasPermission) ? 'checked':'' }}
                                                             > {{ $row }} <br>
                                                         @if ($no++%4 == 0)
-                                                        <br>
+                                                        
                                                         @endif
                                                     @endforeach
                                                 </div>

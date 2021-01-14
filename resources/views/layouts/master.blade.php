@@ -62,11 +62,11 @@
                                 <img src="dist/img/art-media-bg-trans.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
-                                        Brad Diesel
-                                        <span class="float-right text-sm text-danger"><i class="fa fa-star"></i></span>
+                                        {{ $user = auth()->user()->name }}
+                                        <span class="float-right text-sm text-danger"><i class="fa fa-user"></i></span>
                                     </h3>
-                                    <p class="text-sm">Call me whenever you can...</p>
-                                    <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+                                    <p class="text-sm">{{ $user = auth()->user()->email }}</p>
+                                    <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i>{{ $user = auth()->user()->created_at }}</p>
                                 </div>
                             </div>
                         </a>
