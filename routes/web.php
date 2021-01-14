@@ -54,4 +54,10 @@ Route::group(['middleware' => 'auth'], function() {
     //home kita taruh diluar group karena semua jenis user yg login bisa mengaksesnya
     Route::get('/home', 'HomeController@index')->name('home');
     
+    Route::group(['middleware' => ['role:admin,kasir']], function() {
+        Route::get('/order', 'OrderController@index')->name('order.index');
+        Route::get('/order/pdf/{invoice}', 'OrderController@invoicePdf')->name('order.pdf');
+        Route::get('/order/excel/{invoice}', 'OrderController@invoiceExcel')->name('order.excel');
+    });
+    
 });
