@@ -32,7 +32,7 @@
                     <div class="col-md-8">
                         @card
                             @slot('title')
-                            
+                            Produk
                             @endslot
 
                             <div class="row">
@@ -60,32 +60,38 @@
                                             <button class="btn btn-primary btn-sm"
                                                 :disabled="submitCart"
                                                 >
-                                                <i class="fa fa-shopping-cart"></i> @{{ submitCart ? 'Loading...':'Ke Keranjang' }}
+                                                <i class="fa fa-shopping-cart"></i> @{{ submitCart ? 'Loading...':'Tambah ke keranjang' }}
                                             </button>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col-md-5">
-                                    <h4>Detail Produk</h4>
-                                    <div v-if="product.name">
+                                    <b>Detail Produk</b>
+                                    
                                         <table class="table table-stripped">
                                             <tr>
                                                 <th>Kode</th>
                                                 <td>:</td>
+                                                <div v-if="product.code">
                                                 <td>@{{ product.code }}</td>
+                                                </div>
                                             </tr>
                                             <tr>
                                                 <th width="3%">Produk</th>
                                                 <td width="2%">:</td>
+                                                <div v-if="product.name">
                                                 <td>@{{ product.name }}</td>
+                                                </div>
                                             </tr>
                                             <tr>
                                                 <th>Harga</th>
                                                 <td>:</td>
+                                                <div v-if="product.price">
                                                 <td>@{{ product.price | currency }}</td>
+                                                </div>
                                             </tr>
                                         </table>
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-3" v-if="product.photo">
                                     <img :src="'/uploads/product/' + product.photo" 
