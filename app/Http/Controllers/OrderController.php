@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Customer;
 use App\Product;
 use App\Order;
+use App\Order_detail;
 use App\User;
 use Cookie;
 use DB;

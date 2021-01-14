@@ -35,6 +35,7 @@
                             @slot('title')
                                 <h4 class="card-title">Data Pelanggan</h4>
                             @endslot
+                                <!-- JIKA VALUE DARI message ada, maka alert success akan ditampilkan -->
                                 <div v-if="message" class="alert alert-success">
                                     Transaksi telah disimpan, Invoice: <strong>#@{{ message }}</strong>
                                 </div>
@@ -47,7 +48,10 @@
                                         required
                                         >
                                     <p>Tekan enter untuk mengecek email.</p>
+                                    <!-- EVENT KETIKA TOMBOL ENTER DITEKAN, MAKA AKAN MEMANGGIL METHOD searchCustomer dari Vuejs -->
                                 </div>
+                        
+                                <!-- JIKA formCustomer BERNILAI TRUE, MAKA FORM AKAN DITAMPILKAN -->
                                 <div v-if="formCustomer">
                                     <div class="form-group">
                                         <label for="">Nama Pelanggan</label>
@@ -74,12 +78,14 @@
                                 </div>
                             @slot('footer')
                                 <div class="card-footer text-muted">
+                                    <!-- JIKA VALUE DARI errorMessage ada, maka alert danger akan ditampilkan -->
                                     <div v-if="errorMessage" class="alert alert-danger">
                                         @{{ errorMessage }}
                                     </div>
+                                    <!-- JIKA TOMBOL DITEKAN MAKA AKAN MEMANGGIL METHOD sendOrder -->
                                     <button class="btn btn-primary btn-sm float-right"
                                         :disabled="submitForm"  
-                                        @click.prevent="sendOrder"  
+                                        @click.prevent="sendOrder"
                                         >
                                         @{{ submitForm ? 'Loading...':'Order Now' }}
                                     </button>
