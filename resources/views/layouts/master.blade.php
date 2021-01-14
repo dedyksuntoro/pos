@@ -28,15 +28,17 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
                 </li>
+                <!--
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="index3.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
-                </li>
+                </li>-->
             </ul>
 
             <!-- SEARCH FORM -->
+            <!--
             <form class="form-inline ml-3">
                 <div class="input-group input-group-sm">
                     <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -46,18 +48,18 @@
                         </button>
                     </div>
                 </div>
-            </form>
+            </form>-->
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="fa fa-comments-o"></i>
-                        <span class="badge badge-danger navbar-badge">3</span>
+                        <i class="fa fa-gear"></i>
+                        <!--<span class="badge badge-danger navbar-badge">3</span>-->
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <a href="#" class="dropdown-item">
                             <div class="media">
-                                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <img src="dist/img/art-media-bg-trans.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Brad Diesel
@@ -69,7 +71,9 @@
                             </div>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                        <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();" class="dropdown-item dropdown-footer">Logout</a>
                     </div>
                 </li>
             </ul>
